@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+
+body {
+    background-color: rgb(116, 116, 116);
+    background-size: auto;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.column {
+    background-color: rgb(192, 192, 192);
+    width: 70%;
+    margin: auto;
+    padding: 5%;
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 180%;
+    background-color: gray;
+    width: 40%;
+    margin: auto;
+    padding: 1%;
+}
+p {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+}
+.headul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(34, 34, 34);
+}
+
+.headli {
+    float: left;
+}
+
+.headli a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.headli a:hover {
+    background-color: rgb(107, 107, 107);
+}
+
+.middle {
+    justify-self: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 150%;
+    letter-spacing: 10%;
+}
+
+.infolist {
+    padding: 1.5%;
+    margin: auto;
+    background-color: rgb(71, 71, 71);
+    width: 25%;
+    line-height: 120%;
+    list-style: none;
+}
+
+.infolist ul li {
+    display: inline;
+    letter-spacing: 10%;
+}
+ 
+.dp {
+    display: block;
+    margin: auto;
+    width: 18%;
+    border-radius: 0% 40% 0% 40%;
+}
+
+#textlink {
+    text-decoration: none;
+    color: azure;
+}
+
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+  
+.dropdown .droplink {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; 
+    margin: 0; 
+}
+  
+
+.navbar a:hover, .dropdown:hover .droplink {
+    background-color: rgb(148, 148, 148);
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+ 
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
