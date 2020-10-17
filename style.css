@@ -21,9 +21,10 @@ h2 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 180%;
     background-color: gray;
-    width: 40%;
+    width: 16%;
     margin: auto;
     padding: 1%;
+    text-align: center;
 }
 p {
     font-family: 'Josefin Sans', sans-serif;
