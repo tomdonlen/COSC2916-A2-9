@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+* {
+    box-sizing: border-box;
+}
 
 body {
     background-color: rgb(116, 116, 116);
@@ -10,7 +13,18 @@ body {
     background-color: rgb(192, 192, 192);
     width: 70%;
     margin: auto;
-    padding: 5%;
+    padding: auto;
+}
+
+.col1 {
+    width: 25%;
+    float: left;
+    background-color: rgb(192, 192, 192);
+}
+.col2 {
+    width: 100%;
+    float: left;
+    background-color: rgb(192, 192, 192);
 }
 
 h1 {
@@ -21,13 +35,14 @@ h2 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 180%;
     background-color: gray;
-    width: 40%;
+    width: 20%;
     margin: auto;
     padding: 1%;
+    text-align: center;
 }
 p {
     font-family: 'Josefin Sans', sans-serif;
-    text-align: center;
+    font-size: 115%;
 }
 .headul {
     list-style-type: none;
@@ -76,10 +91,11 @@ p {
 }
  
 .dp {
-    display: block;
-    margin: auto;
-    width: 18%;
-    border-radius: 0% 40% 0% 40%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    justify-content: space-evenly;
+    margin: 20px 0px 46px 60px;
 }
 
 #textlink {
