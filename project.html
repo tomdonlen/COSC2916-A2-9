@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Team Profile</title>
+        <title>Project Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
@@ -30,7 +30,102 @@
             </ul>
         </div>
         <div class="column">
-        <div class="header">
-        </div>
+        <h1>Project Idea</h1>
+        <h1>S.K.I.M. (Smart Kitchen Inventory Manager) by IceT</h1>
+        <br>
+        <br>
+        <h2>Overview</h2>
+        <br>
+        <p>This proposed project is a low-cost solution to the problem of coming home from the supermarket with either an incomplete restock or after having purchased well-stocked items. It would do this through a collection of hardware, software and services which would allow the user to scan items in and out of the fridge through a built-in web camera. The device would process images of the items through TensorFlow’s visual recognition service to add or remove the items from a database of currently held refrigerated items and upload that database to a website, which the user could access remotely through a mobile device. Using this webpage, the user would be able to identify favourite items that are running low or that are out of stock, and avoid buying items unnecessarily.</p>
+        <br>
+        <h2>Motivation</h2>
+        <br>
+        <p>The initial motivation for this project began as a way of having a live inventory or what items were stored in the fridge. Living in a busy household, our priorities have not been keeping track of our food supplies, leading to ineffective shopping with repeat items being purchased and sorely needed items being omitted from our shopping baskets. A more manual alternative that was tried was to maintain a shopping list within one of the supermarkets’ home delivery mobile apps, but this was not ideal because specific brands of products needed to be selected for the list and specials coming and going, coupled with items being purchased in top-up shopping meant we either missed out on sales or faced the same problem to a smaller scale.</p>
+        <br>
+        <h2>Description</h2>
+        <br>
+        <p style="text-align:center;"><strong>The aged and impaired</strong></p>
+        <p>A small adaptation of the original idea can potentially benefit those whose daily lives are different to those with a full set of abilities. Those who lose written lists, have difficulty with reading written words, or even those with visual impairments would find benefit from a list with large format images or a text-to-speech addition to both the device and website. Those with limited English could also benefit from a visual shopping list.</p>    
+        <br>
+        <p style="text-align:center;"><strong>Whole of house shopping</strong></p>
+        <p>With more intensive visual recognition training, the project could be expanded beyond the fridge, to include all items available for purchase at the supermarket – pantry, bathroom, and laundry. This would ultimately make the solution a more viable solution, instead of its current limitations, focussing on only part of the grocery shop. A method that involves being able to track the use of items, such as milk and ice cream, within containers when not used in totality when removed from the refrigerator would also benefit the development.</p>
+        <br>
+        <p style="text-align:center;"><strong>Tracking expiry dates</strong></p>
+        <p>Another build suggested was to tag items with a best before or a use by date and put these details on the website. This would have the added benefit of allowing the user to use up items which are nearing their expiry date, so that none of these items go to waste. Moreover, a nominal or average lifespan could be defined and set for produce which does not typically have a set use by date.</p>
+        <br>
+        <p style="text-align:center;"><strong>Commercial kitchens</strong></p>
+        <p style="text-align:center;">The idea could be developed further for commercial kitchens, where large volumes of produce transit to and from the cool room on delivery and throughout the day. An immediate representation of the quantity of items on hand could aid in relocating the ordering process from the kitchen to a back office at any time of the day, and assist the kitchen staff in forecasting and ingredient preparation.</p>
+        <br>
+        <p style="text-align:center;"><strong>FMCG - bottle shops</strong></p>
+        <p>Stock inventory and forecasting is fraught with difficulties for alcohol bottle shop managers. With tight margins, a large variety of line items with varying demand and rapid changes in stock levels, an immediate view of stock levels and time trending abilities could assist in replacing the time-consuming inventory checking which is often run daily or less frequently. A customer-focused supplier could deploy these devices and integrate them with an API for automatic ordering capability which could be used for handling stock replenishment through the busy summer weeks, since running out of stock or ordering too much of a line item is a costly error during those times.</p>
+        <br>
+        <p style="text-align:center;"><strong>Shopping without checkouts</strong></p>
+        <p>With significant development in a variety of weight and positioning sensors, a concept similar to the checkout-less Amazon Go shop could be implemented. Shoppers would activate an app while in store and the items the individual picks up are monitored and added to an electronic cart in the app for better trackability. As the customer leaves the store, all items they are carrying are charged to an account or card. This is a departure from the original concept and visual recognition becomes one part in a suite of sensors and outcomes.</p>
+        <br>
+        <p style="text-align:center;"><strong>Competing technologies</strong></p>
+        <p>As pointed out in feedback received on the concept, it is a matter of time before a commercial solution is available for this idea (Robinson D 2020), but in the 20 years smart fridges have been in existence (Telecompaper, 2000), innovation has largely been limited to internet connectivity and a built in screen. Recent developments include ability to control the cooling parameters of the fridge and some ability to see inside the fridge without opening the door (Lopez-Vito 2019).</p>
+        <p>In terms of the technology at the heart of this project, only two visual recognition alternatives were discovered: IBM Watson (IBM, n.d.) and Google Cloud Vision AI (Google, n.d.). Where TensorFlow offers clear support to Raspberry Pi, further investigation is required on support from the alternatives. Until the exact technological requirements of the project are established, it is difficult to ascertain if they fit within the free versions of each company’s solution.</p>
+        <br>
+        <h2>Tools & Tech</h2>
+        <p style="text-align:center;">The project in its entirety can be separated into three main sections.</p>
+        <br>
+        <p style="text-align:center;"><strong>The sensors</strong></p>
+        <p>The camera is the device’s primary sensor, collecting an input feed of the food items being placed within its sensor zone. The images are received by the hardware and passed onto TensorFlow for analysis.</p>
+        <p>The secondary input is the physical button array, which instruct the software to classify the items as being added to or removed from the inventory.</p>
+        <p style="text-align:center;"><strong>The hardware</strong></p>
+        <p>For the prototype, the project will be built around a Raspberry Pi 4 model B with 8GB ram, as the most current Pi with the highest specification has the highest chance of success. If successful, testing can be run on earlier Pis with lower specifications to determine if the cost of the project can be reduced.</p>
+        <p style="text-align:center;"><strong>The software</strong></p>
+        <p><u>Database</u></p>
+        <p>This project requires up to four databases, which could potentially be reduced through development, each with a specific purpose of: </p>
+        <ul>
+            <li>Holding favourite or high priority items, for categorising on the website as such</li>
+            <li>Translating the object identification output of TensorFlow into something more meaningful to the user, or where regional terms of items apply (for example spring onions vs green onions vs shallots, or rockmelon vs cantaloupe)</li>
+            <li>A list of common items or those which have at one time been identified as being held in the user’s refrigerator, which can assist the user in not having to define parameters for each item whenever it is encountered</li>
+            <li>The resulting, live database of items for webpage display</li>
+        </ul>
+        <p><u>Tensorflow</u></p>
+        <p>Google’s TensorFlow running on a Raspberry Pi is a cloud service that uses machine learning and visual recognition on the Google Cloud Platform (Jassan, 2018) to interpret images and identify aspects of the image, including item recognition and colours, as well as the ability to count of the number of the items in the image. This is achieved through training the service by providing many images of the item with a definition of what that item is. The service then attempts to identify images against its definitions, becoming more accurate with feedback provided to it after each attempt (Jain, 2019).</p>
+        <p>In this application, TensorFlow would be used to define the items being placed in front of the camera and added to or removed from the database.</p>
+        <p><u>Web server</u></p>
+        <p>As the final database of items is designed to be accessible from another device, there is a requirement for it to be published to a web server. Due to the website’s low traffic, low user count, and simplicity of the data being displayed, and the desire to make the device as self-sufficient as possible, the web server could be hosted onboard (Raspberry Pi Foundation, n.d.). For commercial applications or for mass domestic production, the web server might need higher bandwidth to handle an increase in transactions, processing or storage capabilities and could be offered through cloud computing. </p>
+        <p><u>Scripting</u></p>
+        <p>Custom scripting would have to be avoided wherever possible, but we have not yet determined if scripting would be required to move the images from the device into TensorFlow, and in turn transfer the outputs of TensorFlow into the database. It is likely that some simple scripting would be required to define the actions of the button array. Python is the preferred option here, as it is preinstalled on Linux (Python Software Foundation, n.d.) and is a relatively simple programming environment, upon which the Pi’s operating system is built.</p>
+        <p><u>Device to vew the database</u></p>
+        <p>As the database in currently intended to be viewed as a webpage on a mobile device, only a remote IP address for the Raspberry Pi is required (Raspberry Pi Foundation, n.d.). Although it is not in the scope of the current project, a future development here could be an app or a Progressive Web App that would provide an enhanced user experience.</p>
+        <br>
+        <p style="text-align:center;"><strong>Skills</strong></p>
+        <p>Several aspects of this project are relatively uncomplicated, with suite of support material being available for the Raspberry Pi and TensorFlow, although both appear to have something of a learning curve for the uninitiated. The main skills highlighted for this project include: </p>
+        <ul>
+            <li>Linux command line interface commands to install and prepare software and hardware </li>
+            <li>Database creation skills </li>
+            <li>Python scripting skills to fill any gaps left by the afore mentioned software, and to ensure an action path from image generation through to webpage display</li>
+            <li>Web server skills to build and maintain the web server</li>
+            <li>Website creation skills to build and maintain the webpage</li>
+            <li>Troubleshooting skills, to identify and remove software bugs and programming difficulties throughout the project </li>
+            <li>Process mapping skills, to map the action flow from image capture through to webpage display </li>
+        </ul>
+        <br>
+        <br>
+        <h2>Outcome</h2>
+        <br>
+        <p>A successful implementation of this project would allow the key design criteria to be met: images of the items would be captured and processed via TensorFlow, with an identification response received. The database would be appended with the item and the database would be viewable on another device on a different network, preferably a mobile device, connected to a carrier’s mobile network.</p>
+        <p>The impacts of project success to the user would be an increase in the effectiveness of shopping events,  a more economical use of money through less wastage and fewer unnecessary purchases and a more efficient use of time which would all help in removing the need to return to the supermarket for a few forgotten items.</p>
+        <p>The success of this project would help in the development of all types of household technology recognition, making the project device significantly more meaningful and useful. With further development and the establishment of high item identification accuracy, commercial application development could be pursued.</p>
+        <br>
+        <br>
+        <p style="text-align:center;">References</p>
+        <ul>
+            <li>Deep Cognition n.d., Deep Learning Studio, Deep Cognition, viewed 16 October, 2020, https://deepcognition.ai/ </li>
+            <li>Google n.d., Vision AI, Google, viewed 16 October 2020, https://cloud.google.com/vision</li>
+            <li>IBM n.d. Watson Visual Recognition, IBM, viewed 16 October, 2020, https://www.ibm.com/au-en/cloud/watson-visual-recognition</li>
+            <li>Jain, S 2019, How to Easily Detect Objects with Deep Learning on Raspberry Pi, Nanonets, viewed 13 September, 2020, https://nanonets.com/blog/how-to-easily-detect-objects-with-deep-learning-on-raspberry-pi/</li>
+            <li>Jassan, A 2018, Setting up a standalone TensorFlow prediction device with Raspberry Pi and Google Cloud, Google, viewed 16 October 2020, https://cloud.google.com/community/tutorials/standalone-tensorflow-raspberry-pi</li>
+            <li>Lopez-Vito, T 2019, Smart Fridges Buying Guide, Canstar, viewed 18 October, 2020, https://www.canstarblue.com.au/appliances/smart-fridges/</li>
+            <li>Python Software Foundation n.d. Using Python on Unix Platforms, Python Software Foundation, viewed 13 September 2020 https://docs.python.org/2/using/unix.html</li>
+            <li>Raspberry Pi Foundation n.d., Setting up an NGINX web server on a Raspberry Pi, Raspberry Pi Foundation, viewed 16 October, 2020. https://www.raspberrypi.org/documentation/remote-access/web-server/nginx.md.</li>
+            <li>Robinson, D 2020, feedback received on submission of previous assignment by Picone, N 2020 “3.0.0 Assessment Task 1: My Profile”, Unpublished paper, RMIT University, Melbourne</li>
+            <li>Telecompaper 2020, LG Unveils Internet-Ready Refrigerator, viewed 18 October, 2020, https://www.telecompaper.com/news/lg-unveils-internetready-refrigerator--221266</li>
+        </ul>
+    </div>
     </body>
 </html>
