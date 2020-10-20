@@ -13,18 +13,19 @@ body {
     background-color: rgb(192, 192, 192);
     width: 70%;
     margin: auto;
-    padding: 50px 100px 50px 100px;
+    padding-top: 50px;
 }
 
 .col1 {
-    width: 25%;
+    width: 300px;
     float: left;
     background-color: rgb(192, 192, 192);
 }
 .col2 {
-    width: 100%;
+    width: 1321px;
     float: left;
     background-color: rgb(192, 192, 192);
+    padding-right: 30px;
 }
 
 h1 {
