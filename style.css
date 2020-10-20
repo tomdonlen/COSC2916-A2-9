@@ -160,3 +160,13 @@ p {
     margin-right: auto;
     width: 28%;
   }
+
+th, td{
+    border: 1px solid black;
+    padding: 5px;
+    text-align:left;
+}
+
+table {
+    border-collapse: collapse;
+}
